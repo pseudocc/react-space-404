@@ -1,0 +1,11 @@
+{
+  "404": {
+    "code": "404",
+    "lost": "Oops! You're lost in outer space!",
+    "info": "The page you're looking for cannot be reached. An emergency flashback procedure will be activated right before you run out of oxygen. Your safety is guaranteed.",
+    "href": "HOME",
+    "oxygen": "Oxygen runs out in $t(seconds, {\"count\": {{cd}} })."
+  },
+  "seconds": "{{count}} second",
+  "seconds_other": "{{count}} seconds"
+}

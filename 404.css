@@ -1,0 +1,35 @@
+main#page404 {
+  background-color: #3D405B;
+}
+
+main#page404 div#outer-space {
+  width: 540px;
+  height: 540px;
+  position: relative;
+  overflow: hidden;
+}
+
+main#page404 div#message-404 {
+  color: #E1E1E1;
+  z-index: 100;
+}
+
+div#outer-space svg {
+  position: absolute;
+}
+
+div#outer-space svg.astronaut {
+  z-index: 92;
+}
+
+div#outer-space svg.blackhole {
+  z-index: 10;
+}
+
+div#outer-space svg.comet {
+  z-index: 29;
+}
+
+div#outer-space svg.star {
+  z-index: 11;
+}

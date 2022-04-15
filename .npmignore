@@ -1,0 +1,8 @@
+.vscode/
+node_modules/
+screen_cast/
+
+jest.config.js
+babel.config.js
+style-mock.js
+*.test.js
