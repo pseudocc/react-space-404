@@ -4,7 +4,7 @@ React component for 404 page with animations.
 
 ## Screencast
 
-[![outer space 404](/screencast/en-v0.1.0.gif)]
+![outer space 404](/screencast/en-v0.1.0.gif)
 
 ## Usage
 
