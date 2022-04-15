@@ -1,6 +1,6 @@
 {
   "name": "react-space-404",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React component for 404 page with animations.",
   "main": "404.js",
   "scripts": {
@@ -13,6 +13,8 @@
     ]
   },
   "peerDependencies": {
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "@mui/material": "^5.6.1",
@@ -31,8 +33,6 @@
   "author": "Yu Ze",
   "license": "MIT",
   "devDependencies": {
-    "@babel/preset-env": "^7.16.11",
-    "@babel/preset-react": "^7.16.7",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.0.1",
     "jest": "^27.5.1"
