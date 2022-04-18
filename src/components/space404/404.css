@@ -1,5 +1,6 @@
 main#page404 {
   background-color: #3D405B;
+  min-width: 540px;
 }
 
 main#page404 div#outer-space {

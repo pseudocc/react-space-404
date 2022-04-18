@@ -1,12 +1,14 @@
 {
   "name": "react-space-404",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "React component for 404 page with animations.",
-  "main": "404.js",
+  "main": "lib/404.js",
+  "module": "lib/404.esm.js",
+  "types": "lib/404.d.ts",
   "scripts": {
     "test": "jest",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build": "npm test;rollup -c --exports auto"
   },
   "eslintConfig": {
     "extends": [
@@ -15,13 +17,13 @@
     ]
   },
   "peerDependencies": {
+    "@babel/runtime": "^7.17.9",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "@mui/material": "^5.6.1",
     "gsap": "^3.10.3",
     "i18next": "^21.6.16",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0",
     "react-i18next": "^11.16.6"
   },
   "keywords": [
@@ -35,9 +37,16 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.17.9",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "@mui/material": "^5.6.1",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-commonjs": "^21.1.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.2.1",
     "@storybook/addon-actions": "^6.4.22",
     "@storybook/addon-essentials": "^6.4.22",
     "@storybook/addon-interactions": "^6.4.22",
@@ -50,13 +59,15 @@
     "gsap": "^3.10.3",
     "i18next": "^21.6.16",
     "jest": "^27.5.1",
+    "postcss": "^8.4.12",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-i18next": "^11.16.6"
+    "react-i18next": "^11.16.6",
+    "rollup": "^2.70.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2"
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/pseudocc/react-space-404.git"
-  },
-  "dependencies": {}
+  }
 }
