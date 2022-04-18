@@ -4,7 +4,7 @@ React component for 404 page with animations.
 
 ## Screencast
 
-![outer space 404](/screencast/en-v0.1.0.gif)
+![outer space 404](/screencast/en-v1.0.0.gif)
 
 ## Usage
 
@@ -49,6 +49,10 @@ import Space404 from 'react-space-404';
 - React
 - MUI(Material UI)
 - gsap
+
+## Development
+
+Powered by storybook, use `npm run storybook` to start the dev server.
 
 ## Test
 
