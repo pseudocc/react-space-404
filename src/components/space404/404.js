@@ -483,6 +483,7 @@ function Space404({
   // only start the animation once
   useEffect(
     () => {
+      console.log('all_options');
       for (const option of all_options) {
         gsap.fromTo(option.ref.current, option.from, option.to);
       }
@@ -491,14 +492,15 @@ function Space404({
     []
   );
 
-  useEffect(() => {
-    setTimeout(() => {
-      if (cd > 0)
-        set_cd(cd - 1);
-      else
-        window.location.href = href;
-    }, 1e3);
-  }, [cd]);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     console.log('tick');
+  //     if (cd > 0)
+  //       set_cd(cd - 1);
+  //     else
+  //       window.location.href = href;
+  //   }, 1e3);
+  // }, [cd]);
 
   return (
     <main id="page404" className="page">

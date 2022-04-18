@@ -4,7 +4,9 @@
   "description": "React component for 404 page with animations.",
   "main": "404.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "eslintConfig": {
     "extends": [
@@ -13,15 +15,14 @@
     ]
   },
   "peerDependencies": {
-    "@babel/preset-env": "^7.16.11",
-    "@babel/preset-react": "^7.16.7",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "@mui/material": "^5.6.1",
     "gsap": "^3.10.3",
     "i18next": "^21.6.16",
-    "react-i18next": "^11.16.6",
-    "react": "^18.0.0"
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-i18next": "^11.16.6"
   },
   "keywords": [
     "react",
@@ -33,12 +34,29 @@
   "author": "Yu Ze",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/material": "^5.6.1",
+    "@storybook/addon-actions": "^6.4.22",
+    "@storybook/addon-essentials": "^6.4.22",
+    "@storybook/addon-interactions": "^6.4.22",
+    "@storybook/addon-links": "^6.4.22",
+    "@storybook/react": "^6.4.22",
+    "@storybook/testing-library": "^0.0.9",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.0.1",
-    "jest": "^27.5.1"
+    "babel-loader": "^8.2.4",
+    "gsap": "^3.10.3",
+    "i18next": "^21.6.16",
+    "jest": "^27.5.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-i18next": "^11.16.6"
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/pseudocc/react-space-404.git"
-  }
+  },
+  "dependencies": {}
 }
