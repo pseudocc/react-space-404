@@ -6,3 +6,6 @@ jest.config.js
 babel.config.js
 style-mock.js
 *.test.js
+
+.storybook/
+src/stories/
