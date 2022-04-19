@@ -31,7 +31,6 @@ function Space404({
   const [t, i18n_t] = useTranslation(null, { i18n, keyPrefix: '404' });
 
   Object.assign(palette, palette_d);
-  i18n_t.changeLanguage(language);
 
   const all_shapes = [
     astronaut_shape,
@@ -53,6 +52,14 @@ function Space404({
     }
   }
 
+  useEffect(
+    () => {
+      if (i18n_t.language != language && i18n_t.languages.includes(language))
+        i18n_t.changeLanguage(language);
+    },
+    [language]
+  );
+
   // only start the animation once
   useEffect(
     () => {
@@ -64,18 +71,23 @@ function Space404({
     []
   );
 
-  if (process.env.NODE_ENV != 'development') {
-    useEffect(() => {
+  useEffect(
+    () => {
       const tid = setTimeout(() => {
         console.log('tick');
         if (cd > 0)
           set_cd(cd - 1);
-        else
+        else if (process.env.NODE_ENV != 'development') {
           window.location.href = href;
+        }
+        else {
+          set_cd(countdown);
+        }
       }, 1e3);
       return () => clearTimeout(tid);
-    }, [cd]);
-  }
+    },
+    [cd]
+  );
 
   return (
     <main id="page404" className="page">

@@ -1,6 +1,7 @@
 .vscode/
 node_modules/
-screen_cast/
+screencast/
+package-lock.json
 
 jest.config.js
 babel.config.js
