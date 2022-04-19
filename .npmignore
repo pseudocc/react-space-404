@@ -3,9 +3,8 @@ node_modules/
 screencast/
 package-lock.json
 
-jest.config.js
-babel.config.js
-style-mock.js
+*.config.js
+jest.mock.js
 *.test.js
 
 .storybook/
