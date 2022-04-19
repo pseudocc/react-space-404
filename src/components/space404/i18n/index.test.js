@@ -13,5 +13,8 @@ describe('i18n', () => {
     cd += 1 + Math.round(Math.random() * 10);
     oxygen = i18n.t('404.oxygen', { cd });
     expect(oxygen).toEqual(`Oxygen runs out in ${cd} seconds.`);
+
+    oxygen = i18n.t('404.oxygen', { cd: 0 });
+    expect(oxygen).toEqual(`Oxygen runs out in no time.`);
   });
 });

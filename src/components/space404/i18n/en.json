@@ -7,5 +7,6 @@
     "oxygen": "Oxygen runs out in $t(seconds, {\"count\": {{cd}} })."
   },
   "seconds": "{{count}} second",
+  "seconds_zero": "no time",
   "seconds_other": "{{count}} seconds"
 }
