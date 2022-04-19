@@ -54,7 +54,7 @@ function Space404({
 
   useEffect(
     () => {
-      if (i18n_t.language != language && i18n_t.languages.includes(language))
+      if (i18n_t.language != language)
         i18n_t.changeLanguage(language);
     },
     [language]
@@ -74,7 +74,6 @@ function Space404({
   useEffect(
     () => {
       const tid = setTimeout(() => {
-        console.log('tick');
         if (cd > 0)
           set_cd(cd - 1);
         else if (process.env.NODE_ENV != 'development') {
