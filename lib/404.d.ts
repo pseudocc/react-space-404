@@ -14,7 +14,8 @@ declare namespace atlas {
     countdown: number,
     href: string,
     i18n: typeof i18next,
-    language: Language
+    language: Language,
+    stay: boolean
   };
 }
 
