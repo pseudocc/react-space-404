@@ -2,6 +2,14 @@
 
 React component for 404 page with animations.
 
+## Installation
+
+**Note:** You needs npm version >= 7 to install peer dependencies automatically.
+
+```bash
+npm install --save-dev react-space-404
+```
+
 ## Screencast
 
 ![outer space 404](/screencast/en-v1.0.0.gif)
@@ -15,8 +23,8 @@ import Space404 from 'react-space-404';
 
 <Space404 palette={custom_palette} countdown={10} href="/redirect" />
 
-// simplifed Chinese with default wordings
-<Space404 language="chs" />
+// simplifed Chinese with default wordings and no redirects
+<Space404 language="chs" stay />
 
 // with customized wordings
 <Space404 i18n={i18n_protoss} language="protoss" />
