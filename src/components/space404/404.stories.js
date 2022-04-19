@@ -10,16 +10,26 @@ const meta = {
   argTypes: {
     countdown: { type: 'number' },
     href: { type: 'string' },
-    language: { type: 'string' }
+    language: { type: 'string' },
+    stay: { type: 'boolean' }
   }
 };
 
 const template = args => <Space404 {...args} />;
+template.args = { countdown: 10 };
 
 export const English = template.bind({});
-English.args = { language: 'en' };
+English.args = {
+  ...template.args,
+  language: 'en',
+  href: '/iframe.html?id=space-404--english'
+};
 
 export const Chinese = template.bind({});
-Chinese.args = { language: 'chs' };
+Chinese.args = {
+  ...template.args,
+  language: 'chs',
+  href: '/iframe.html?id=space-404--chinese'
+};
 
 export default meta;
