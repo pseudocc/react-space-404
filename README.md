@@ -42,7 +42,13 @@ import Space404 from 'react-space-404';
 
     language name in string, the built-in i18n instance supports `chs` and `en`.
 
-    The default value is `en`.
+    the default value is `en`.
+
+- stay
+
+    stay in this page without redirect.
+
+    the default value is `false`.
 
 ## Dependencies
 
