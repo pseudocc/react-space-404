@@ -25,9 +25,11 @@ function Space404({
   countdown = 30,
   href = '/',
   i18n = i18n_d,
-  language = language_d
+  language = language_d,
+  stay = false
 }) {
   const [cd, set_cd] = useState(countdown);
+  const [loading, set_loading] = useState(true);
   const [t, i18n_t] = useTranslation(null, { i18n, keyPrefix: '404' });
 
   Object.assign(palette, palette_d);
@@ -63,29 +65,29 @@ function Space404({
   // only start the animation once
   useEffect(
     () => {
+      if (!loading)
+        return;
       for (const option of all_shapes) {
         gsap.fromTo(option.ref.current, option.from, option.to);
       }
+      set_loading(false);
     },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    []
+    [loading]
   );
 
   useEffect(
     () => {
+      if (stay)
+        return;
       const tid = setTimeout(() => {
         if (cd > 0)
           set_cd(cd - 1);
-        else if (process.env.NODE_ENV != 'development') {
+        else
           window.location.href = href;
-        }
-        else {
-          set_cd(countdown);
-        }
       }, 1e3);
       return () => clearTimeout(tid);
     },
-    [cd]
+    [cd, stay]
   );
 
   return (
@@ -93,7 +95,7 @@ function Space404({
       <Grid container direction="row" justifyContent="center" alignItems="center" mt={2}>
         <Grid item xs={0} md={1} />
         <Grid item xs={12} md={3}>
-          <Box id="outer-space">
+          <Box id="outer-space" visibility={loading ? "hidden" : "inherit"}>
             <Astronaut props={{ ref: astronaut_shape.ref, className: "astronaut" }} />
             <BlackHole props={{ ref: blackhole_shape.ref, className: "blackhole" }} />
             {comets_shapes.map((o, i) =>
@@ -129,7 +131,7 @@ function Space404({
                   {t("href")}
                 </Button>
                 <Typography variant="body2">
-                  {t("oxygen", { cd })}
+                  {stay ? "" : t("oxygen", { cd })}
                 </Typography>
               </Stack>
             </Box>
